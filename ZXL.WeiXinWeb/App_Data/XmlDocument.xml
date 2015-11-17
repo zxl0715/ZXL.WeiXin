@@ -4,6 +4,12 @@
         <name>ZXL.WeiXinWeb</name>
     </assembly>
     <members>
+        <member name="M:ZXL.WeiXinWeb.Areas.WeiXin.Controllers.ProcessorController.Get">
+            <summary>
+            微信签名校验
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:ZXL.WeiXinWeb.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"

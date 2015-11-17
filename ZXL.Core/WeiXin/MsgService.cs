@@ -9,6 +9,12 @@ namespace ZXL.Core.WeiXin
 {
     public class MsgService : BaseService<MsgService>
     {
+        /// <summary>
+        /// 被动响应消息(返回XML)
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public string ResponseXML(object value, Type type)
         {
             StringWriter sw = new StringWriter();

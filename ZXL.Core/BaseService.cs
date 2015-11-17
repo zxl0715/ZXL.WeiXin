@@ -25,7 +25,7 @@ namespace ZXL.Core
                         if (service == null)
                         {
 
-                            LogHelper.WriteLog(typeof(T).ToString());
+                           // LogHelper.WriteLog(typeof(T).ToString());
                             service = new T();
                         }
                     }
