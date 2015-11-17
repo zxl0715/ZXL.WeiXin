@@ -13,8 +13,11 @@ namespace ZXL.WeiXinWeb.Areas.WeiXin.Controllers
     public class ProcessorController : ApiController
     {
         //
-        // GET: /Controllers/Processor/
-
+        // GET: /WeiXin/Processor
+        /// <summary>
+        /// 微信签名校验
+        /// </summary>
+        /// <returns></returns>
         public HttpResponseMessage Get()
         {
             var requestQueryPairs = Request.GetQueryNameValuePairs().ToDictionary(k => k.Key, v => v.Value);
