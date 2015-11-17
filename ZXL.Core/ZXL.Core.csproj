@@ -39,8 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseService.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeiXin\MsgService.cs" />
+    <Compile Include="WeiXin\Msg\BaseMsg.cs" />
+    <Compile Include="WeiXin\Msg\ImageMsg.cs" />
+    <Compile Include="WeiXin\Msg\MediaInfo.cs" />
+    <Compile Include="WeiXin\Msg\NewsMsg.cs" />
+    <Compile Include="WeiXin\Msg\TextMsg.cs" />
+    <Compile Include="WeiXin\Msg\VideoMsg.cs" />
+    <Compile Include="WeiXin\Msg\VoiceMsg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZXL.Common\ZXL.Common.csproj">
+      <Project>{571d61c3-9817-40fe-98c5-182be75e56c8}</Project>
+      <Name>ZXL.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

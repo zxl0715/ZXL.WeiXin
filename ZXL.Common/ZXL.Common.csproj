@@ -31,7 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,10 +45,10 @@
     <Compile Include="ConfigHelper.cs" />
     <Compile Include="DataCache.cs" />
     <Compile Include="DataFormatter.cs" />
+    <Compile Include="HashAlgorithm.cs" />
     <Compile Include="JsonTools.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="LogisTrac.cs" />
-    <Compile Include="MsgType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultInfo.cs" />
     <Compile Include="SignaledChange.cs" />
@@ -54,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\log4net\log4net.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

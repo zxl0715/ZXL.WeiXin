@@ -150,6 +150,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\WeiXin\Controllers\Filter\WXExceptionFilterAttribute.cs" />
+    <Compile Include="Areas\WeiXin\Controllers\ProcessorController.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
     <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
     <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
@@ -164,6 +166,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Areas\WeiXin\Controllers\Filter\WXAuthorizeAttribute.cs" />
+    <Compile Include="Areas\WeiXin\WeiXinAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -286,11 +290,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\WeiXin\Filter\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZXL.Common\ZXL.Common.csproj">
+      <Project>{571d61c3-9817-40fe-98c5-182be75e56c8}</Project>
+      <Name>ZXL.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXL.Core\ZXL.Core.csproj">
+      <Project>{b19597a5-fd29-4653-adbd-dafdfe20a728}</Project>
+      <Name>ZXL.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

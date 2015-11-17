@@ -44,10 +44,9 @@ namespace ZXL.Common
             if (logerror.IsErrorEnabled)
             {
                 logerror.Error(info, se);
-                Log.Instance.logFileSplit = LogFileSplit.Weekly;             
-                Log.Instance.LogWrite("异常信息:" + se.Message + " Stack Trace:" + se.StackTrace.ToString(), MsgLevel.Error);
+            
             }
-        }  
+        }
 
     }
 }

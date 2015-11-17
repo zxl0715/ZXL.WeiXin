@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ZXL.Common
+namespace ZXL.Core.WeiXin.Msg
 {
-    class JsonTools
+    public class MediaInfo
     {
+        public string MediaId { get; set; }
     }
 }
