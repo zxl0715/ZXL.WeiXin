@@ -23,7 +23,26 @@ namespace ZXL.WeiXinWeb.Controllers
             List<SysSampleModel> list = m_BLL.GetList("");
             return View(list);
         }
-
-
+ 
+        public JsonResult GetList()
+        {
+            List<SysSampleModel> list = m_BLL.GetList("");
+            var json = new
+            {
+                total = list.Count,
+                rows = (from r in list
+                        select new SysSampleModel()
+                        {
+                            Id = r.Id,
+                            Name = r.Name,
+                            Age = r.Age,
+                            Bir = r.Bir,
+                            Note = r.Note,
+                            Photo = r.Photo,
+                            CreateTime = r.CreateTime
+                        })
+            };
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
     }
 }

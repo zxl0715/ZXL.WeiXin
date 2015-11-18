@@ -76,7 +76,7 @@ $(function () {
 });
 $(function () {
     /*为选项卡绑定右键*/
-    $(".tabs li").live('contextmenu', function (e) {
+    $(".tabs li").bind('contextmenu', function (e) {
         /*选中当前触发事件的选项卡 */
         var subtitle = $(this).text();
         $('#mainTab').tabs('select', subtitle);

@@ -1,70 +1,35 @@
-﻿@model IEnumerable<ZXL.Models.Sys.SysSampleModel>
-
+﻿@*<script src="~/Scripts/jquery.easyui.min.js"></script>*@
+@using ZXL.WeiXinWeb;
+@using ZXL.Common;
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Main.cshtml";
 }
-<!DOCTYPE html>
+<table id="List">
+</table>
+<script type="text/javascript">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table>
-        <tr>
-            <th>
-               名称
-            </th>
-            <th>
-               年龄
-            </th>
-            <th>
-              生日
-            </th>
-            <th>
-               照片
-            </th>
-            <th>
-               备注
-            </th>
-            <th>
-                创建时间
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bir)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Note)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreateTime)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+    $('#List').datagrid({
+        url: 'SysSample/GetList',
+        width: $(window).width() - 10,
+        heigth: $(window).height() - 35,
+        methord: 'post',
+        fitColumns: true,
+        sortName: 'Id',
+        sortOrder: 'desc',
+        idField: 'Id',
+        striped: true,//奇偶行是否区分
+        singleSelect: true,//单选模式
+        rownumbers: true, //行号
+        columns: [[
+            { field: 'Id', title: 'ID', width: 80 },
+            { field: 'Name', title: '名称', width: 120 },
+            { field: 'Age', title: '年龄', width: 80, align: 'right' },
+            { field: 'Bir', title: '生日', width: 80, align: 'right' },
+            { field: 'Photo', title: '照片', width: 250 },
+            { field: 'Note', title: '说明', width: 60, align: 'center' },
+            { field: 'CreateTime', title: '创建时间', width: 60, align: 'center' }
+        ]]
+    });
+
+</script>
