@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysSampleBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZXL.Common\ZXL.Common.csproj">
+      <Project>{571d61c3-9817-40fe-98c5-182be75e56c8}</Project>
+      <Name>ZXL.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXL.DAL\ZXL.DAL.csproj">
+      <Project>{ecd5592b-34c4-498e-8af8-87e0636d5f0a}</Project>
+      <Name>ZXL.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXL.IBLL\ZXL.IBLL.csproj">
+      <Project>{87abea25-25e4-4fa4-8dec-6d82b7f12d2f}</Project>
+      <Name>ZXL.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXL.IDAL\ZXL.IDAL.csproj">
+      <Project>{cdba1296-5efb-4d68-9c22-a45ce3cb8863}</Project>
+      <Name>ZXL.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZXL.Models\ZXL.Models.csproj">
+      <Project>{61a9747b-7eeb-428c-9d40-605221af2e8b}</Project>
+      <Name>ZXL.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

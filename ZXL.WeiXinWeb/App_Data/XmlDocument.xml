@@ -426,5 +426,10 @@
             </summary>
             <param name="actionContext">上下文</param>
         </member>
+        <member name="P:ZXL.WeiXinWeb.Controllers.SysSampleController.m_BLL">
+            <summary>
+            业务层注入
+            </summary>
+        </member>
     </members>
 </doc>
