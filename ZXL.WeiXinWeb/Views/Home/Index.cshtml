@@ -1,45 +1,77 @@
-﻿<div id="body">
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>Welcome to ASP.NET Web API!</h1>
-                <h2>Modify the code in this template to jump-start your ASP.NET Web API development.</h2>
-            </hgroup>
-            <p>
-                ASP.NET Web API allows you to expose your applications, data and services to the
-                web directly over HTTP.
-            </p>
-            <p>
-                To learn more about ASP.NET Web API visit the
-                <a href="http://go.microsoft.com/fwlink/?LinkID=238195" title="ASP.NET Web API Website">ASP.NET Web API Website</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET Web API.
-                If you have any questions about ASP.NET Web API, visit
-                <a href="http://go.microsoft.com/fwlink/?LinkID=238196" title="ASP.NET Web API Forum">our forums</a>.
-            </p>
-        </div>
-    </section>
-    <section class="content-wrapper main-content clear-fix">
-        <h3>We suggest the following steps:</h3>
-        <ol class="round">
-            <li class="one">
-                <h5>Getting Started</h5>
-                ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-                a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-                is an ideal platform for building RESTful applications on the .NET Framework.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245160">Learn more…</a>
-            </li>
+﻿@{
+    Layout = null;
+   
+}
 
-            <li class="two">
-                <h5>Add NuGet packages and jump-start your coding</h5>
-                NuGet makes it easy to install and update free libraries and tools.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245161">Learn more…</a>
-            </li>
-            <li class="three">
-                <h5>Find Web Hosting</h5>
-                You can easily find a web hosting company that offers the right mix of features
-                and price for your applications.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245164">Learn more…</a>
-            </li>
-        </ol>
-    </section>
-</div>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="@Url.Content("~/Scripts/jquery.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")" type="text/javascript"></script>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/bootstrap/css")
+    @Scripts.Render("~/bundles/home")
+</head>
+<body class="easyui-layout">
+    <div id="OverTimeLogin" class="easyui-dialog" data-options="closed:true,modal:true">
+        <iframe width="726px" scrolling="no" height="497px" frameborder="0" id="iOverTimeLogin"></iframe>
+    </div>
+    <div data-options="region:'north',border:false,split:true" style="height: 60px;">
+        <div class="define-head">
+            <div class="define-logo">
+                <div id="LoginTopLine">YmNets.cnblogs.com</div>
+                <div id="LoginBotoomLine">MVC4+EF5.0+EasyUI</div>
+            </div>
+            <div class="define-account">
+            </div>
+        </div>
+    </div>
+    <div data-options="region:'west',split:true,title:'菜单列表'" style="width: 200px; height: 100%; padding-top: 2px; background-color: #fff; overflow: auto">
+        <div id="RightTree" style="background-color: #fff;">
+            <div class="panel-loading">加载中...</div>
+        </div>
+    </div>
+    <div data-options="region:'south',border:false" style="height: 20px;">
+        <div class="define-bottom">
+        </div>
+    </div>
+    <div data-options="region:'center',border:false">
+        <div id="mainTab" class="easyui-tabs" data-options="fit:true">
+            <div title="我的桌面" data-options="closable:true" style="overflow: hidden; background: #fff">
+                <iframe scrolling="auto" frameborder="0" src="/SysSample" style="width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="tab_menu" class="easyui-menu" style="width: 150px;">
+        <div id="tab_menu-tabrefresh" data-options="iconCls:'icon-reload'">
+            刷新
+        </div>
+        <div id="tab_menu-openFrame">
+            在新的窗体打开
+        </div>
+        <div id="tab_menu-tabcloseall">
+            关闭所有
+        </div>
+        <div id="tab_menu-tabcloseother">
+            关闭其他标签页
+        </div>
+        <div class="menu-sep">
+        </div>
+        <div id="tab_menu-tabcloseright">
+            关闭右边
+        </div>
+        <div id="tab_menu-tabcloseleft">
+            关闭左边
+        </div>
+        <div id="tab_menu-tabclose" data-options="iconCls:'icon-remove'">
+            关闭
+        </div>
+        <div id="menu" class="easyui-menu" style="width: 150px;">
+        </div>
+    </div>
+</body>
+</html>

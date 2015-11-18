@@ -21,6 +21,9 @@ namespace ZXL.WeiXinWeb
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //启用压缩
+            BundleTable.EnableOptimizations = true;
+
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }

@@ -38,6 +38,30 @@ namespace ZXL.WeiXinWeb
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/common").Include(
+                       "~/Scripts/common.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/home").Include(
+                       "~/Scripts/home.js"));
+
+            //easyui
+            bundles.Add(new StyleBundle("~/Content/themes/bootstrap/css").Include("~/Content/themes/bootstrap/easyui.css"));
+            bundles.Add(new StyleBundle("~/Content/themes/gray/css").Include("~/Content/themes/gray/easyui.css"));
+            bundles.Add(new StyleBundle("~/Content/themes/metro/css").Include("~/Content/themes/metro/easyui.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryfrom").Include(
+                       "~/Scripts/jquery.form.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/easyuiplus").Include(
+                        "~/Scripts/jquery.easyui.plus.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.validate.unobtrusive.plus.js"));
+
+
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
         }
     }
 }

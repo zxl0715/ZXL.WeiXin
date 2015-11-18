@@ -33,7 +33,10 @@ namespace ZXL.WeiXinWeb.Areas.WeiXin.Controllers
                 Content = new StringContent(requestQueryPairs["echostr"]),
             };
         }
-
+        /// <summary>
+        /// 微信响应消息
+        /// </summary>
+        /// <returns></returns>
         public HttpResponseMessage Post()
         {
             try
