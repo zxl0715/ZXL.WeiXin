@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Microsoft.Practices.Unity;
+using ZXL.Core;
 
 namespace ZXL.WeiXinWeb
 {
@@ -25,6 +27,12 @@ namespace ZXL.WeiXinWeb
             BundleTable.EnableOptimizations = true;
 
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            //注入 Ioc 构造函数注入
+            var container = new UnityContainer();
+            DependencyRegisterType.Container_Sys(ref container);
+            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }
 }
